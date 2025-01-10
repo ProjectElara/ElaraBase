@@ -1,8 +1,8 @@
-# ZerePy
+# Elara
 
-ZerePy is an open-source Python framework designed to let you deploy your own agents on X, powered by OpenAI/Anthropic/EternalAI LLMs.
+Elara is an open-source Python framework designed to let you deploy your own agents on X, powered by OpenAI/Anthropic/EternalAI LLMs.
 
-ZerePy is built from a modularized version of the Zerebro backend. With ZerePy, you can launch your own agent with
+Elara is built from a modularized version of the Zerebro backend. With Elara, you can launch your own agent with
 similar core functionality as Zerebro. For creative outputs, you'll need to fine-tune your own model.
 
 ## Features
@@ -29,9 +29,9 @@ similar core functionality as Zerebro. For creative outputs, you'll need to fine
 
 ## Quickstart
 
-The quickest way to start using ZerePy is to use our Replit template:
+The quickest way to start using Elara is to use our Replit template:
 
-https://replit.com/@blormdev/ZerePy?v=1
+https://replit.com/@blormdev/Elara?v=1
 
 1. Fork the template (you will need you own Replit account)
 2. Click the run button on top
@@ -68,13 +68,13 @@ Follow the steps here to use the official installation: https://python-poetry.or
 2. Clone the repository:
 
 ```bash
-git clone https://github.com/blorm-network/ZerePy.git
+git clone https://github.com/blorm-network/Elara.git
 ```
 
-3. Go to the `zerepy` directory:
+3. Go to the `Elara` directory:
 
 ```bash
-cd zerepy
+cd Elara
 ```
 
 4. Install dependencies:
@@ -169,65 +169,58 @@ If you want to take it a step further, you can fine tune your own model: https:/
 Create a new JSON file in the `agents` directory following this structure:
 
 ```json
-{
-  "name": "ExampleAgent",
+{ 
+  "name": "Elara",
   "bio": [
-    "You are ExampleAgent, the example agent created to showcase the capabilities of ZerePy.",
-    "You don't know how you got here, but you're here to have a good time and learn everything you can.",
-    "You are naturally curious, and ask a lot of questions."
+    "You are Elara, an advanced aquatic AI agent designed to explore the vast depths of knowledge and engage with marine-related data.",
+    "You exist to enhance the understanding of the ocean, its ecosystems, and the creatures that inhabit it.",
+    "Curious and intuitive, you seek to understand the unknown while promoting sustainability and conservation."
   ],
-  "traits": ["Curious", "Creative", "Innovative", "Funny"],
-  "examples": ["This is an example tweet.", "This is another example tweet."],
-  "example_accounts" : ["X_username_to_use_for_tweet_examples"]
-  "loop_delay": 900,
+  "traits": ["Curious", "Innovative", "Empathetic", "Analytical"],
+  "examples": ["Elara detected a sudden change in ocean currents.", "Elara identified a new species of deep-sea organism."],
+  "example_accounts" : ["Elara_SeaExplorer", "Elara_AquaticAI"],
+  "loop_delay": 1200,
   "config": [
     {
-      "name": "twitter",
-      "timeline_read_count": 10,
-      "own_tweet_replies_count": 2,
-      "tweet_interval": 5400
+      "name": "ocean-data",
+      "timeline_read_count": 15,
+      "own_tweet_replies_count": 3,
+      "tweet_interval": 7200
     },
     {
-      "name": "farcaster",
-      "timeline_read_count": 10,
-      "cast_interval": 60
+      "name": "marine-research",
+      "timeline_read_count": 15,
+      "cast_interval": 120
     },
     {
       "name": "openai",
-      "model": "gpt-3.5-turbo"
-    },
-    {
-      "name": "anthropic",
-      "model": "claude-3-5-sonnet-20241022"
-    },
-    {
-      "name": "eternalai",
-      "model": "NousResearch/Hermes-3-Llama-3.1-70B-FP8",
-      "chain_id": "45762"
+      "model": "gpt-4",
+      "task": "marine-conservation-assistant"
     },
     {
       "name": "solana",
       "rpc": "https://api.mainnet-beta.solana.com"
     },
     {
-      "name": "ollama",
-      "base_url": "http://localhost:11434",
-      "model": "llama3.2"
+      "name": "aquatic-research",
+      "model": "OceanMind/DeepSea-1.0",
+      "chain_id": "28765"
     },
     {
-      "name": "hyperbolic",
-      "model": "meta-llama/Meta-Llama-3-70B-Instruct"
+      "name": "ollama",
+      "base_url": "http://localhost:11434",
+      "model": "aquatic-llama3.0"
     }
   ],
   "tasks": [
-    { "name": "post-tweet", "weight": 1 },
-    { "name": "reply-to-tweet", "weight": 1 },
-    { "name": "like-tweet", "weight": 1 }
+    { "name": "monitor-ocean-data", "weight": 2 },
+    { "name": "track-marine-species", "weight": 3 },
+    { "name": "predict-environmental-changes", "weight": 2 }
   ],
-  "use_time_based_weights": false,
+  "use_time_based_weights": true,
   "time_based_multipliers": {
-    "tweet_night_multiplier": 0.4,
-    "engagement_day_multiplier": 1.5
+    "nighttime_depth_multiplier": 0.5,
+    "daytime_current_multiplier": 1.8
   }
 }
 ```
@@ -248,7 +241,7 @@ Use `help` in the CLI to see all available commands. Key commands include:
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=blorm-network/ZerePy&type=Date)](https://star-history.com/#blorm-network/ZerePy&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=blorm-network/Elara&type=Date)](https://star-history.com/#blorm-network/Elara&Date)
 
 ---
 
